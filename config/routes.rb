@@ -1,17 +1,21 @@
 Rails.application.routes.draw do
-  get 'pages/home'
 
-  get 'pages/terms'
+  #Custom Devise Routes
 
-  get 'pages/errors'
 
+  #RESTful Routes Generators
+
+
+  # Root Routes
   root to: 'pages#home'
 
+
+  #Match Routes
   match 'home', to: 'pages#home', via: 'get'
   match 'terms', to: 'pages#terms', via: 'get'
   match 'conditions', to: 'pages#terms', via: 'get'
   match 'errors', to: 'pages#errors', via: 'get'
 
-
+  # Catch All Errors Route
   get '*path', to: redirect('/errors')
 end
