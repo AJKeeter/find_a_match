@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_09_212223) do
+ActiveRecord::Schema.define(version: 2019_06_09_213033) do
+
+  create_table "fields", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "match_id"
+    t.integer "venue_id"
+    t.boolean "indoor_outdoor"
+    t.string "name"
+    t.string "earliest_time_restriction"
+    t.string "latest_time_restriction"
+    t.string "surface_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "venues", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "address"

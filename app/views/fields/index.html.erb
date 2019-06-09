@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fields</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Match</th>
+      <th>Venue</th>
+      <th>Indoor outdoor</th>
+      <th>Name</th>
+      <th>Earliest time restriction</th>
+      <th>Latest time restriction</th>
+      <th>Surface type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fields.each do |field| %>
+      <tr>
+        <td><%= field.match_id %></td>
+        <td><%= field.venue_id %></td>
+        <td><%= field.indoor_outdoor %></td>
+        <td><%= field.name %></td>
+        <td><%= field.earliest_time_restriction %></td>
+        <td><%= field.latest_time_restriction %></td>
+        <td><%= field.surface_type %></td>
+        <td><%= link_to 'Show', field %></td>
+        <td><%= link_to 'Edit', edit_field_path(field) %></td>
+        <td><%= link_to 'Destroy', field, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Field', new_field_path %>

@@ -1,0 +1,52 @@
+<%= form_with(model: field, local: true) do |form| %>
+  <% if field.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(field.errors.count, "error") %> prohibited this field from being saved:</h2>
+
+      <ul>
+      <% field.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :match_id %>
+    <%= form.number_field :match_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :venue_id %>
+    <%= form.number_field :venue_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :indoor_outdoor %>
+    <%= form.check_box :indoor_outdoor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :earliest_time_restriction %>
+    <%= form.text_field :earliest_time_restriction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latest_time_restriction %>
+    <%= form.text_field :latest_time_restriction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :surface_type %>
+    <%= form.text_field :surface_type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

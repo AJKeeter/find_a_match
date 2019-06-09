@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :fields
   resources :venues
   #Custom Devise Routes
 
