@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_09_213033) do
+ActiveRecord::Schema.define(version: 2019_06_09_213643) do
 
   create_table "fields", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "match_id"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 2019_06_09_213033) do
     t.string "earliest_time_restriction"
     t.string "latest_time_restriction"
     t.string "surface_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "matches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "play_style"
+    t.integer "players_min"
+    t.integer "players_max"
+    t.string "gender"
+    t.string "start_time"
+    t.string "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
