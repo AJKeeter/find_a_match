@@ -10,6 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_06_09_212223) do
+
+  create_table "venues", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "address"
+    t.string "fields"
+    t.string "gps"
+    t.string "display_name"
+    t.string "actual_name"
+    t.string "city"
+    t.string "state"
+    t.integer "zip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
