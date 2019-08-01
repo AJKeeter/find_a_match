@@ -5,8 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Match</th>
-      <th>Venue</th>
       <th>Indoor outdoor</th>
       <th>Name</th>
       <th>Earliest time restriction</th>
@@ -19,8 +17,6 @@
   <tbody>
     <% @fields.each do |field| %>
       <tr>
-        <td><%= field.match_id %></td>
-        <td><%= field.venue_id %></td>
         <td><%= field.indoor_outdoor %></td>
         <td><%= field.name %></td>
         <td><%= field.earliest_time_restriction %></td>

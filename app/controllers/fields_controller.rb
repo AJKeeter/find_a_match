@@ -69,6 +69,6 @@ class FieldsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def field_params
-      params.require(:field).permit(:match_id, :venue_id, :indoor_outdoor, :name, :earliest_time_restriction, :latest_time_restriction, :surface_type)
+      params.require(:field).permit( :venue_id, :indoor_outdoor, :name, :earliest_time_restriction, :latest_time_restriction, :surface_type)
     end
 end
